@@ -2015,6 +2015,7 @@ body>div.in-loader {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 
 body>div.in-loader div {
