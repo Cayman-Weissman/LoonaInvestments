@@ -335,9 +335,7 @@
                                                 </select><br><br>
                                                 <button type="button" onclick="showCalculation()" style="font-weight:bold;" class="uk-button uk-button-default uk-border-rounded uk-visible@s">Calculate</button>
                                             </form>
-                                          <div id="calculation">
-                                            <h1>Estimated Annual Gains:</h1>
-                                          </div>
+                                          <div id="calculation"></div>
                                         </div>
                                       
                                       </div>
@@ -345,7 +343,7 @@
                                       <script>
                                         function showCalculation() {
                                         var calculationValue = document.getElementById('amountMoney').value;
-                                        document.getElementById('calculation').innerHTML = calculationValue;
+                                        document.getElementById('calculation').innerHTML = "<h1>Estimated Annual Return</h1>" + calculationValue;
                                         document.getElementById('calculationForm').style.display = "none";
                                         }
                                       // Get the modal
