@@ -364,9 +364,9 @@
                                       </div>
                                       
                                       <script>
-                                        function calculate() {
-                                            var x = document.getElementById("calculation");
-                                            x.className = "show";
+                                        function showValue() {
+                                        var name = document.getElementById('amountMoney').value;
+                                        document.getElementById('calculation').innerHTML = name;
                                         }
                                       // Get the modal
                                       var modal = document.getElementById("myModal");
