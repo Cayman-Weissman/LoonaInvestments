@@ -357,13 +357,17 @@
                                                 
                                             </div>
                                             <br><br>
-                                            <button style="font-weight:bold;" onClick="calculate()" class="uk-button uk-button-default uk-border-rounded uk-visible@s" type="submit">Calculate</button>
+                                            <input style="font-weight:bold;" onClick="calculate()" class="uk-button uk-button-default uk-border-rounded uk-visible@s" type="submit" value="Calculate">
                                           </form>
                                         </div>
                                       
                                       </div>
                                       
                                       <script>
+                                        function calculate() {
+                                            var x = document.getElementById("calculation");
+                                            x.className = "show";
+                                        }
                                       // Get the modal
                                       var modal = document.getElementById("myModal");
                                       
@@ -374,15 +378,9 @@
                                       var span = document.getElementsByClassName("close")[0];
                                       
                                       // When the user clicks the button, open the modal 
-                                      function calculate() {
-                                        document.getElementById('amountMoney').style.display = "block";
-                                        }
-
-                                        // function showValue() {
-                                        // var name = document.getElementById('name').value;
-                                        // document.getElementById('ans').innerHTML = name;
-                                        // document.getElementById('hello').style.display = "none";
-                                        // }
+                                      btn.onclick = function() {
+                                        modal.style.display = "block";
+                                      }
                                       
                                       // When the user clicks on <span> (x), close the modal
                                       span.onclick = function() {
@@ -416,11 +414,6 @@
                                                 event.preventDefault();
                                             }
                                         }, false);
-
-                                        function calculate() {
-                                            var x = document.getElementById("calculation");
-                                            x.className = "show";
-                                        }
                                       </script>
                                       
                                 </div>
