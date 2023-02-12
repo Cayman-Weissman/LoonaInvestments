@@ -375,6 +375,11 @@
                                             || event.key.length !== 1) { // (C)
                                                 return;
                                             }
+                                            amountMoney.onkeydown = function(e) {
+                                                if (e.keyCode === 190) {
+                                                    e.preventDefault();
+                                                }
+                                            }
                                             
                                             if(!digitPeriodRegExp.test(event.key)) {
                                                 console.log(1);
@@ -382,12 +387,6 @@
                                             }
                                         }, false);
 
-                                        amountMoney.onkeydown = function(e) {
-                                            if (e.keyCode === 190) {  //C, V will be disabled.
-                                                e.preventDefault();
-                                            }
-                                            return false;
-                                        }
                                       </script>
                                       
                                 </div>
