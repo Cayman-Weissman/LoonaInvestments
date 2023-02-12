@@ -354,7 +354,7 @@
                                               <option value="MaxRisk">Max Risk</option>
                                             </select><br><br>
                                             <div id="calculation">
-
+                                                
                                             </div>
                                             <br><br>
                                             <button style="font-weight:bold;" onClick="calculate()" class="uk-button uk-button-default uk-border-rounded uk-visible@s" type="submit">Calculate</button>
@@ -374,9 +374,15 @@
                                       var span = document.getElementsByClassName("close")[0];
                                       
                                       // When the user clicks the button, open the modal 
-                                      btn.onclick = function() {
-                                        modal.style.display = "block";
-                                      }
+                                      function calculate() {
+                                        document.getElementById('amountMoney').style.display = "block";
+                                        }
+
+                                        // function showValue() {
+                                        // var name = document.getElementById('name').value;
+                                        // document.getElementById('ans').innerHTML = name;
+                                        // document.getElementById('hello').style.display = "none";
+                                        // }
                                       
                                       // When the user clicks on <span> (x), close the modal
                                       span.onclick = function() {
