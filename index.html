@@ -365,7 +365,8 @@
                                       <script>
                                         function showCalculation() {
                                         var calculationValue = document.getElementById('amountMoney').value;
-                                        document.getElementById('calculation').innerHTML = name;
+                                        document.getElementById('calculation').innerHTML = calculationValue;
+                                        document.getElementById('calculationForm').style.display = "none";
                                         }
                                       // Get the modal
                                       var modal = document.getElementById("myModal");
