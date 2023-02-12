@@ -350,8 +350,8 @@
                                                 document.getElementById('calculation').innerHTML = "<h3><b>Estimated Annual Return:</b></h3>" + "-$" + calculationValue + " to " + "$" + calculationValue2;
                                                 document.getElementById('calculationForm').style.display = "none";
                                             } else if(document.getElementById('amountRisk').value == "HighRisk") {
-                                                var calculationValue = ((calculationValue * 0.75) * 0.2) + ((calculationValue * 0.25) * 1.07);
-                                                var calculationValue2 = ((calculationValue2 * 0.75) * 0.4) + ((calculationValue2 * 0.25) * 1.07);
+                                                var calculationValue = (calculationValue * 0.75 * 0.2) + (calculationValue * 0.25 * 1.07);
+                                                var calculationValue2 = (calculationValue2 * 0.75 * 0.4) + (calculationValue2 * 0.25 * 1.07);
                                                 document.getElementById('calculation').innerHTML = "<h3><b>Estimated Annual Return:</b></h3>" + "-$" + calculationValue + " to " + "$" + calculationValue2;
                                                 document.getElementById('calculationForm').style.display = "none";
                                             }
