@@ -313,7 +313,27 @@
                                       #riskAmount:focus {
                                          outline: none;
                                       }
-                            
+                                      #calculation {
+                                        visibility: hidden;
+                                        min-width: 250px;
+                                        margin-left: -125px;
+                                        background-color: #333;
+                                        color: #fff;
+                                        text-align: center;
+                                        border-radius: 2px;
+                                        padding: 16px;
+                                        position: fixed;
+                                        z-index: 1;
+                                        left: 50%;
+                                        bottom: 30px;
+                                        font-size: 17px;
+                                        }
+
+                                        #calculation.show {
+                                        visibility: visible;
+                                        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                                        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                                        }
                                       </style>
                                       
                                       <!-- The Modal -->
@@ -333,7 +353,11 @@
                                               <option value="HighRisk">High Risk</option>
                                               <option value="MaxRisk">Max Risk</option>
                                             </select><br><br>
-                                            <input style="font-weight:bold;" class="uk-button uk-button-default uk-border-rounded uk-visible@s" type="submit" value="Calculate">
+                                            <div id="calculation">
+
+                                            </div>
+                                            <br><br>
+                                            <input style="font-weight:bold;" class="uk-button uk-button-default uk-border-rounded uk-visible@s" script="event.preventDefault()" type="submit" value="Calculate">
                                           </form>
                                         </div>
                                       
