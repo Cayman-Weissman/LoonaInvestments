@@ -357,7 +357,7 @@
 
                                             </div>
                                             <br><br>
-                                            <button style="font-weight:bold;" class="uk-button uk-button-default uk-border-rounded uk-visible@s" type="submit" value="Calculate" />
+                                            <button style="font-weight:bold;" onClick="return calculate()" class="uk-button uk-button-default uk-border-rounded uk-visible@s" type="submit" value="Calculate" />
                                           </form>
                                         </div>
                                       
@@ -411,6 +411,10 @@
                                             }
                                         }, false);
 
+                                        function calculate() {
+                                            var x = document.getElementById("calculation");
+                                            x.className = "show";
+                                        }
                                       </script>
                                       
                                 </div>
