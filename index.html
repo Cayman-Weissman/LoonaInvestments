@@ -344,9 +344,9 @@
                                         function showCalculation() {
                                         var calculationValue = document.getElementById('amountMoney').value;
                                         var calculationValue2 = document.getElementById('amountMoney').value;
-                                        var calculationValue = calculationValue / 1.2;
-                                        var calculationValue2 = calculationValue2 * 1.4;
-                                        document.getElementById('calculation').innerHTML = "<h2><b>Estimated Annual Return:</b></h2>" + calculationValue + "to" + calculationValue2;
+                                        var calculationValue = calculationValue * -0.2;
+                                        var calculationValue2 = calculationValue2 * 0.4;
+                                        document.getElementById('calculation').innerHTML = "<h2><b>Estimated Annual Return:</b></h2>" + calculationValue.round() + " to " + calculationValue2.round();
                                         document.getElementById('calculationForm').style.display = "none";
                                         }
                                       // Get the modal
