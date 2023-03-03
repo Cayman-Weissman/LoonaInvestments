@@ -1,0 +1,11 @@
+{
+  "name": "loonainvestments",
+  "version": "1.0.0",
+  "description": "Loona Investments",
+  "main": "Main.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "",
+  "license": "ISC"
+}
