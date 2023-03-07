@@ -1,17 +1,7 @@
-import express from 'express';
-// import { port } from './config/index.js';
-// import loader from './loaders/index.js';
+var app = require('express')();
+var http = require('http').Server(app);
+var path = require('path');
 
-const app = express();
-
-loader(app);
-
-app.listen(port, err => {
-  if (err) {
-    console.log(err);
-    return process.exit(1);
-  }
-  console.log(`Server is running on ${port}`);
+app.get('/', function(req, res){
+    res.render('index.html', { /*data*/ });
 });
-
-export default app
