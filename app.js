@@ -157,8 +157,8 @@ async function findAccount(email) {
   
 app.use('/api/', api)
 
-const PORT = '8080'
+const PORT = process.env.PORT;
 
-server.listen(PORT , function() {
+server.listen(PORT, function() {
   console.log(`Listening on port ${PORT}`)
 })
