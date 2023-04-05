@@ -130,16 +130,23 @@
     <main>
         <!-- slideshow content begin -->
         <div class="uk-section uk-padding-remove-vertical">
-            <div class="uk-light in-slideshow uk-background-cover uk-background-top-center" style="background-image: url(img/in-liquid-slide-bg.png);" data-uk-slideshow>
+            <div class="uk-light in-slideshow uk-background-cover uk-background-top-center" id="bg9" style="background-image: url(img/in-liquid-slide-bg.png);" data-uk-slideshow>
                     </li>
                     <li>
                         <div class="uk-container">
                             <div class="uk-grid-medium" data-uk-grid>
-                                <span style="font-size:48px;position:absolute;">Welcome <b><%= account.fullName %></b>!</span>
-                                <span style="font-size:12px;position:absolute;margin-top:100px;">You are now apart of the Loona Investments beta team and are registered with the email <b><%= account.email %></b>.</span>
+                                <span id="welcome9" style="font-size:48px;position:absolute;">Welcome <b><%= account.fullName %></b>!</span>
+                                <span id="reg9" style="font-size:18px;position:absolute;margin-top:175px;">You are now apart of the Loona Investments beta team<br>and are registered with the email <b><%= account.email %></b>.</span>
                             </div>
                         </div>
                     </li>
+                    <style>
+                        @media (max-width:970px){
+                            #bg9 {
+                                height: 600px;
+                            }
+                        }
+                    </style>
             </div>
         </div>
     <footer>
