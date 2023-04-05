@@ -137,7 +137,7 @@ async function findAccount(email) {
     let pass = await bcrypt.hash(req.body.password, 10)
   
     const accountCreated = new mongoAccount({
-    // gender, dob, email, phoneNumber, Address, password, ssn
+    // gender, dob, email, phoneNumber, address, ssn
       fullName: req.body.fullName,
       email: req.body.email,
       password: pass,
