@@ -3,6 +3,7 @@ const app = express()
 const bodyparser = require('body-parser')
 var session = require('cookie-session')
 var path = require('path');
+require('dotenv').config();
 
 app.use(bodyparser.json())
 app.use(bodyparser.raw())
