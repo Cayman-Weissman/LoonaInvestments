@@ -89,7 +89,7 @@ const error = {
 error.notfound.get()
 
 const mongoose = require('./data/mongo.js')()
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 
 const api = express.Router() // api!
 
