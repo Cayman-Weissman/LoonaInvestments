@@ -13,6 +13,8 @@ const account = new Schema({
   password: String,
   //Step 4
   ssn: String,
+  //Step 5
+  accountType: Number,
 }, { collection: "Users" });
 
 module.exports = model("Accounts", account);
