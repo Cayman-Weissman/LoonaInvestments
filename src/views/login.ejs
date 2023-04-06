@@ -199,6 +199,24 @@
                                         <div class="form-group">
                                         <button type="submit" class="form-control btn btn-primary submit px-3">Login</button>
                                         </div>
+                                        <% if (wrongemail) { %>
+                                            <error>
+                                                <i class="fa fa-times-circle"></i>
+                                                Incorrect email or password.
+                                            </error>
+                                                <script>
+                                                document.title = 'Loona | Login - Incorrect Email or Password.'
+                                            </script>
+                                        <% } %>
+                                        <% if (wrongpass) { %>
+                                                <error>
+                                                <i class="fa fa-times-circle"></i>
+                                                Incorrect email or password.
+                                            </error>
+                                            <script>
+                                                document.title = 'Loona | Login - Incorrect Email or Password.'
+                                            </script>
+                                        <% } %>
                                         <br>
                                         </form>
                                         </div>
@@ -236,24 +254,6 @@
                                         </div>
                                         </section>
                                         <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114" integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw==" data-cf-beacon='{"rayId":"7b3700934b742412","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.3.0","si":100}' crossorigin="anonymous"></script>
-                                        <% if (wrongemail) { %>
-                                            <error>
-                                                <i class="fa fa-times-circle"></i>
-                                                Incorrect email or password.
-                                            </error>
-                                                <script>
-                                                document.title = 'Loona | Login - Incorrect Email or Password.'
-                                            </script>
-                                        <% } %>
-                                        <% if (wrongpass) { %>
-                                                <error>
-                                                <i class="fa fa-times-circle"></i>
-                                                Incorrect email or password.
-                                            </error>
-                                            <script>
-                                                document.title = 'Loona | Login - Incorrect Email or Password.'
-                                            </script>
-                                        <% } %>
                                         <% if (wrongpass || wrongemail) { %>
                                             <script>
                                                 window.history.replaceState({}, "", `/login`)
@@ -266,8 +266,7 @@
                                                 color: #D8000C;
                                                 font-size: 12px;
                                                 position: absolute;
-                                                margin-top: -270px;
-                                                margin-left: 335px;
+                                                margin-top: -5px;
                                             }
                                         </style>
                                         </div>

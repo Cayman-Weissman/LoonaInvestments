@@ -203,6 +203,15 @@
                                         <div class="form-group">
                                         <button type="submit" class="form-control btn btn-primary submit px-3">Sign Up</button>
                                         </div>
+                                        <% if (usedemail) { %>
+                                            <error>
+                                                <i class="fa fa-times-circle"></i>
+                                                Email has already been used.
+                                            </error>
+                                            <script>
+                                                document.title = 'Whoopp | Signup - Email has already been used.'
+                                            </script>
+                                        <% } %>
                                         <br>
                                         </form>
                                         </div>
@@ -241,15 +250,19 @@
                                         </section>
                                         <% if (usedemail) { %>
                                             <script>
-                                                alert("Email has already been used.")
-                                                document.title = 'Whoopp | Signup - Email has already been used.'
-                                            </script>
-                                        <% } %>
-                                        <% if (usedemail) { %>
-                                            <script>
                                                 window.history.replaceState({}, "", `/signup`)
                                             </script>
                                         <% } %>
+                                        <style>
+                                            @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+                                            error {
+                                                color: #D8000C;
+                                                font-size: 12px;
+                                                position: absolute;
+                                                margin-top: -5px;
+                                            }
+                                        </style>
                                         </div>
                                         </div>
                                         <div id="dropDownSelect1"></div>
