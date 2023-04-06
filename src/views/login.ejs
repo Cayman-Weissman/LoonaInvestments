@@ -119,7 +119,7 @@
                     	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	                    background-size: 400% 400%;
 	                    animation: gradient 15s ease infinite;
-	                    height: 1080px;
+	                    height: 100vh;
                     }
                     @keyframes gradient {
                         0% {
@@ -203,11 +203,11 @@
                                         </div>
                                         <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last" style="position:relative;margin-top:-30px;height:0px;width:100%;">
                                         <div class="text w-100">
-                                        <p style="font-size:14px;color:white;font-family:'Inter',sans-serif;position:relative;margin-top:15px;">Don't have an account?<a href="/signup" class="btn btn-white btn-outline-white" style="font-family:'Inter',sans-serif;font-size:14px;margin-left:10px;height:30px;display:inline-flex;align-items:center;">Sign Up</a></p>
+                                        <p style="font-size:12px;color:white;font-family:'Inter',sans-serif;position:relative;margin-top:15px;">Don't have an account?<a href="/signup" class="btn btn-white btn-outline-white" style="font-family:'Inter',sans-serif;font-size:12px;margin-left:10px;height:25px;display:inline-flex;align-items:center;">Sign Up</a></p>
                                         <style>
                                             @media (min-width:992px){
                                                 #bg9 {
-                                                    height:1080px;
+                                                    height:100%;
                                                 }
                                             }
                                         </style>
@@ -219,15 +219,21 @@
                                         </section>
                                         <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114" integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw==" data-cf-beacon='{"rayId":"7b3700934b742412","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.3.0","si":100}' crossorigin="anonymous"></script>
                                         <% if (wrongemail) { %>
-                                            <script>
-                                                alert("Incorrect Email or Password.")
-                                                document.title = 'Whoopp | Login - Incorrect Email or Password.'
+                                            <error>
+                                                <i class="fa fa-times-circle"></i>
+                                                Incorrect email or password.
+                                            </error>
+                                                <script>
+                                                document.title = 'Loona | Login - Incorrect Email or Password.'
                                             </script>
                                         <% } %>
                                         <% if (wrongpass) { %>
+                                                <error>
+                                                <i class="fa fa-times-circle"></i>
+                                                Incorrect email or password.
+                                            </error>
                                             <script>
-                                                alert("Incorrect Email or Password.")
-                                                document.title = 'Whoopp | Login - Incorrect Email or Password.'
+                                                document.title = 'Loona | Login - Incorrect Email or Password.'
                                             </script>
                                         <% } %>
                                         <% if (wrongpass || wrongemail) { %>
@@ -235,14 +241,20 @@
                                                 window.history.replaceState({}, "", `/login`)
                                             </script>
                                         <% } %>
+                                        <style>
+                                            @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+                                            error {
+                                                color: #D8000C;
+                                                font-size: 12px;
+                                                position: absolute;
+                                                margin-top: -270px;
+                                                margin-left: 335px;
+                                            }
+                                        </style>
                                         </div>
                                         </div>
                                         <div id="dropDownSelect1"></div>
-                                        <% if (isLoggedIn) { %>
-                                            <script>
-                                                window.location.href = "/dashboard";
-                                            </script>
-                                        <% } %>
                                         <script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
                                         
                                         <script src="../vendor/animsition/js/animsition.min.js"></script>
@@ -276,40 +288,6 @@
                 document.innerHTML = "<style>.limiter { margin-left:20%; }</style>";
             }
         </script>
-    <footer id="footer9">
-        <!-- footer content begin -->
-        <div class="uk-section uk-background-secondary uk-light">
-            <div class="uk-container uk-text-small">
-                <div class="uk-child-width-1-2@m" data-uk-grid>
-                    <div class="in-footer-logo">
-                        <img src="img/in-lazy.gif" data-src="../img/in-logo-1.png" alt="logo" width="127" height="27" data-uk-img>
-                    </div>
-                    <div class="uk-flex uk-flex-right@m">
-                        <div class="in-footer-socials">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                        <!-- <a class="uk-button uk-button-text uk-margin-large-left uk-visible@m" href="#">Company News</a>
-                        <a class="uk-button uk-button-text uk-margin-large-left uk-visible@m" href="#">Partnership</a> -->
-                    </div>
-                </div>
-                <div class="uk-grid uk-margin-large-top">
-                    <div class="uk-width-1-1">
-                        <p class="uk-heading-line uk-margin-large-bottom"><span>Copyright ©2023 Loona Inc. All Rights Reserved.</span></p>
-                        <p class="in-trading-risk">Trading derivatives and leveraged products carries a high level of risk, including the risk of losing substantially more than your initial investment. It is not suitable for everyone. Before you make any decision in relation to a financial product you should obtain and consider our Product Disclosure Statement (PDS) and Financial Services Guide (FSG) available on our website and seek independent advice if necessary</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- footer content end -->
-        <!-- totop begin -->
-        <div class="uk-visible@m">
-            <a href="#" class="in-totop fas fa-chevron-up" data-uk-scroll></a>
-        </div>
-        <!-- totop end -->
-    </footer>
     <!-- Javascript -->
     <script src="../js/vendors/uikit.min.js"></script>
     <script src="../js/vendors/blockit.min.js"></script>
