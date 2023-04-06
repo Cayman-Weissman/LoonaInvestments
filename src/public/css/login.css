@@ -2075,9 +2075,9 @@
     background-color: #007bff;
     border-color: #007bff; }
     .btn-primary:hover {
-      color: #fff;
-      background-color: #0069d9;
-      border-color: #0062cc; }
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff; }
     .btn-primary:focus, .btn-primary.focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
       box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
@@ -8365,8 +8365,8 @@
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f75959', endColorstr='#f35587', GradientType=1 ); }
       .btn.btn-primary:hover {
         border: 1px solid #f35588;
-        background: #f35588;
-        color: #fff; }
+        background: transparent;
+        color: #f35588; }
       .btn.btn-primary.btn-outline-primary {
         border: 1px solid #f35588;
         background: transparent;

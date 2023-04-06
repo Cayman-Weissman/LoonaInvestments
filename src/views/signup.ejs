@@ -47,7 +47,7 @@
             <nav class="uk-navbar-container" style="position:relative;margin-top:-10px;" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
                 <div class="uk-container" data-uk-navbar>
                     <div class="uk-navbar-left">
-                        <div class="uk-navbar-item">
+                        <div class="uk-navbar-item" >
                             <!-- logo begin -->
                             <a class="uk-logo" href="/">
                                 <img src="img/in-lazy.gif" data-src="../img/in-logo-1.png" alt="logo" width="160" height="34" data-uk-img>
@@ -55,10 +55,10 @@
                             <!-- logo end -->
                             <!-- navigation begin -->
                             <ul class="uk-navbar-nav uk-visible@m">
-                                <li><a href="/">Home</a>
+                                <li><a href="/" style="color:white;">Home</a>
                                 </li>
-                                <li><a href="/updates">Updates</a></li>
-                                <li><a href="#">Company<i class="fas fa-chevron-down"></i></a>
+                                <li><a href="/updates" style="color:white;">Updates</a></li>
+                                <li><a href="#" style="color:white;">Company<i class="fas fa-chevron-down"></i></a>
                                     <div class="uk-navbar-dropdown">
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li><a href="/about">About</a></li>
@@ -67,7 +67,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="#">Resources<i class="fas fa-chevron-down"></i></a>
+                                <li><a href="#" style="color:white;">Resources<i class="fas fa-chevron-down"></i></a>
                                     <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
                                         <div class="uk-navbar-dropdown-grid uk-child-width-1-2" data-uk-grid>
                                             <div>
@@ -113,8 +113,27 @@
     <main>
         <!-- slideshow content begin -->
         <div class="uk-section uk-padding-remove-vertical">
-            <div class="uk-light in-slideshow uk-background-cover uk-background-top-center" id="bg9" style="background-image: url(../img/in-liquid-slide-bg.png);" data-uk-slideshow>
-                                    <div class="uk-overlay">              
+            <div class="uk-light in-slideshow uk-background-cover uk-background-top-center" id="bg9" data-uk-slideshow>
+                <style>
+                    #bg9 {
+                    	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	                    background-size: 400% 400%;
+	                    animation: gradient 15s ease infinite;
+	                    height: 100vh;
+                    }
+                    @keyframes gradient {
+                        0% {
+                            background-position: 0% 50%;
+                        }
+                        50% {
+                            background-position: 100% 50%;
+                        }
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                    }
+                </style> 
+                                <div class="uk-overlay">              
                                         
                                         <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
                                         
