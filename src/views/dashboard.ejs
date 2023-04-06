@@ -41,7 +41,7 @@
     <header>
         <!-- header content begin -->
         <div class="uk-section uk-padding-remove-vertical">
-            <nav class="uk-navbar-container" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
+            <nav class="uk-navbar-container" style="position:relative;margin-top:-10px;" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
                 <div class="uk-container" data-uk-navbar>
                     <div class="uk-navbar-left">
                         <div class="uk-navbar-item">
@@ -105,15 +105,12 @@
         <!-- slideshow content begin -->
         <div class="uk-section uk-padding-remove-vertical">
             <div class="uk-light in-slideshow uk-background-cover uk-background-top-center" id="bg9" style="background-image: url(img/in-liquid-slide-bg.png);" data-uk-slideshow>
-                    </li>
-                    <li>
                         <div class="uk-container">
                             <div class="uk-grid-medium" data-uk-grid>
                                 <span id="welcome9" style="font-size:36px;position:absolute;">Welcome <b><%= account.fullName %></b>!</span>
                                 <span id="reg9" style="font-size:18px;position:absolute;margin-top:150px;">You are now apart of the Loona Investments beta team<br>and are registered with the email <b><%= account.email %></b>.</span>
                             </div>
                         </div>
-                    </li>
                     <style>
                         @media (max-width:970px){
                             #bg9 {

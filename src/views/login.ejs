@@ -44,7 +44,7 @@
     <header>
         <!-- header content begin -->
         <div class="uk-section uk-padding-remove-vertical">
-            <nav class="uk-navbar-container" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
+            <nav class="uk-navbar-container" style="position:relative;margin-top:-10px;" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
                 <div class="uk-container" data-uk-navbar>
                     <div class="uk-navbar-left">
                         <div class="uk-navbar-item">
@@ -114,8 +114,6 @@
         <!-- slideshow content begin -->
         <div class="uk-section uk-padding-remove-vertical">
             <div class="uk-light in-slideshow uk-background-cover uk-background-top-center" id="bg9" style="background-image: url(../img/in-liquid-slide-bg.png);" data-uk-slideshow>
-                    </li>
-                    <li>
                                     <div class="uk-overlay">              
                                         
                                         <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
@@ -153,7 +151,13 @@
                                         <div class="wrap d-md-flex">
                                         <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
                                         <div class="text w-100">
-                                        <h3><b>Welcome Back!</b></h3>
+                                        <script>
+                                            function random_item(emojis){
+                                                return emojis[Math.floor(Math.random()*emojis.length)];    
+                                            }
+                                            var emojis = ['🤗', '😙', '😜', '😎'];
+                                        </script>
+                                        <h3><b>Welcome Back! <script>document.write(random_item(emojis))</script></b></h3>
                                         </div>
                                         </div>
                                         <div class="login-wrap p-4 p-lg-5">
@@ -248,7 +252,6 @@
                                     </div>
                                 </div>
                             </div>
-                    </li>
         <script>
             if (window.innerWidth < 970) {
                 document.innerHTML = "<style>.limiter { margin-left:20%; }</style>";
