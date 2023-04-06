@@ -8285,7 +8285,7 @@
   .checkbox-wrap {
     display: block;
     position: relative;
-    padding-left: 30px;
+    padding-left: 25px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 16px;
@@ -8307,7 +8307,8 @@
   .checkmark {
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+ }
   
   /* Create the checkmark/indicator (hidden when not checked) */
   .checkmark:after {
