@@ -49,7 +49,7 @@
                     background-size: 400% 400%;
                     animation: gradient 15s ease infinite;
                     margin-top: -95px;
-                    height: 722px;
+                    height: calc(100vh + 10px);
                     width: 100%;
                 }
                 @keyframes gradient {
@@ -216,8 +216,9 @@
     <main>
         <!-- slideshow content begin -->
         <div class="uk-section uk-padding-remove-vertical">
-            <div class="uk-light in-slideshow uk-background-cover uk-background-top-center" style="background-image: url(img/in-liquid-slide-bg.png);" id="bg9" data-uk-slideshow>
-                        <div class="uk-container">
+            <div class="uk-light in-slideshow uk-background-cover uk-background-top-center" style="background-image: url(img/in-liquid-slide-bg.png);height:calc(100vh + 15px)" id="bg9" data-uk-slideshow>
+                <br>    
+                <div class="uk-container">
                             <div class="uk-grid-medium" data-uk-grid>
                                 <div class="uk-width-1-2@s">
                                     <div class="uk-overlay">
@@ -244,7 +245,7 @@
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2@s">
-                                    <img class="in-slide-img" src="img/in-lazy.gif" data-src="img/in-liquid-slide-2.svg" alt="image-slide" width="500" height="400" data-uk-img>
+                                    <img class="in-slide-img" src="img/in-lazy.gif" data-src="img/in-liquid-slide-2.png" alt="image-slide" width="500" height="400" data-uk-img>
                                 </div>
                             </div>
                         </div>
@@ -301,15 +302,12 @@
         </div>
         <!-- section content end -->
         <!-- section content begin -->
-        <div style="background:#212224;" class="uk-section uk-section-secondary in-liquid-1">
+        <!-- <div style="background:#212224;" class="uk-section uk-section-secondary in-liquid-1">
             <div class="uk-container uk-light">
                 <div class="uk-grid uk-flex uk-flex-middle">
                     <div class="uk-width-1-2@m">
                         <h2>Our Investment Options</h2>
                     </div>
-                    <!-- <div class="uk-width-1-2@m">
-                        <a class="uk-button uk-button-default uk-border-rounded uk-align-right@m" href="#">Find out more<i class="fas fa-angle-right uk-margin-small-left"></i></a>
-                    </div> -->
                 </div>
                 <div class="uk-child-width-1-3@m" data-uk-grid>
                     <div>
@@ -434,10 +432,8 @@
                                       }
                                       </style>
                                       
-                                      <!-- The Modal -->
                                       <div id="myModal" class="modal">
                                       
-                                        <!-- Modal content -->
                                         <div class="modal-content">
                                           <span class="close">&times;</span>
                                             <form id="calculationForm">
@@ -543,7 +539,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="uk-section in-liquid-2">
             <div class="uk-container">
                 <div class="uk-grid-large uk-child-width-1-2@m" data-uk-grid>
