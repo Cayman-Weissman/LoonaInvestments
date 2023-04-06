@@ -88,13 +88,31 @@
                         </div>
                     </div>
                     <div class="uk-navbar-right">
-                                <button id="logout9" style="font-weight:bold;color:black;" class="uk-button uk-button-primary uk-border-rounded" onclick="logout()">Logout</button>
+                                <button id="logout9" style="font-weight:bold;" class="uk-button uk-button-primary uk-border-rounded" onclick="logout()">Logout</button>
                         
                                 <script>
                                   function logout() {
                                     window.location.href = "/logout";
                                   }
                                 </script>
+                                <style>
+                                    #logout9 {
+                                        background: #fc5b3f;
+                                        color:white;
+                                        -webkit-transition: background-color 1s;
+                                        -moz-transition: background-color 1s;
+                                        -o-transition: background-color 1s;
+                                        transition: background-color 1s;
+                                    }
+                                    #logout9:hover {
+                                        background: white;
+                                        color: #fc5b3f;
+                                        -webkit-transition: background-color 1s;
+                                        -moz-transition: background-color 1s;
+                                        -o-transition: background-color 1s;
+                                        transition: background-color 1s;
+                                    }
+                                </style>
                     </div>
                 </div>
             </nav>

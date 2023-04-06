@@ -42,6 +42,28 @@
     <header>
         <!-- header content begin -->
         <div class="uk-section uk-padding-remove-vertical">
+            <style>
+                #bg8 {
+                    position: absolute;
+                    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                    background-size: 400% 400%;
+                    animation: gradient 15s ease infinite;
+                    margin-top: -95px;
+                    height: 722px;
+                    width: 100%;
+                }
+                @keyframes gradient {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+            </style>
             <nav class="uk-navbar-container" style="position:relative;margin-top:-10px;" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
                 <div class="uk-container" data-uk-navbar>
                     <div class="uk-navbar-left">
@@ -53,10 +75,10 @@
                             <!-- logo end -->
                             <!-- navigation begin -->
                             <ul class="uk-navbar-nav uk-visible@m">
-                                <li><a href="/">Home</a>
+                                <li><a href="/" style="color:white;">Home</a>
                                 </li>
-                                <li><a href="/updates">Updates</a></li>
-                                <li><a href="#">Company<i class="fas fa-chevron-down"></i></a>
+                                <li><a href="/updates" style="color:white;">Updates</a></li>
+                                <li><a href="#" style="color:white;">Company<i class="fas fa-chevron-down"></i></a>
                                     <div class="uk-navbar-dropdown">
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li><a href="/about">About</a></li>
@@ -65,7 +87,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="#">Resources<i class="fas fa-chevron-down"></i></a>
+                                <li><a href="#" style="color:white;">Resources<i class="fas fa-chevron-down"></i></a>
                                     <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
                                         <div class="uk-navbar-dropdown-grid uk-child-width-1-2" data-uk-grid>
                                             <div>
@@ -92,9 +114,43 @@
                         <div class="uk-navbar-item uk-visible@m in-optional-nav">
                             <a href="/login" style="font-weight:bold;" id="loginBtn" class="uk-button uk-button-primary uk-border-rounded">Login</a><hr>&nbsp;&nbsp;&nbsp;</hr>
                             <a href="/signup" style="font-weight:bold;" id="signupBtn" class="uk-button uk-button-primary uk-border-rounded">Create Account</a>
+                            <style>
+                                        #signupBtn {
+                                            background: #fc5b3f;
+                                            color:white;
+                                            -webkit-transition: background-color 1s;
+                                            -moz-transition: background-color 1s;
+                                            -o-transition: background-color 1s;
+                                            transition: background-color 1s;
+                                        }
+                                        #signupBtn:hover {
+                                            background: white;
+                                            color: #fc5b3f;
+                                            -webkit-transition: background-color 1s;
+                                            -moz-transition: background-color 1s;
+                                            -o-transition: background-color 1s;
+                                            transition: background-color 1s;
+                                        }
+                                        #loginBtn {
+                                            background: white;
+                                            color: #fc5b3f;
+                                            -webkit-transition: background-color 1s;
+                                            -moz-transition: background-color 1s;
+                                            -o-transition: background-color 1s;
+                                            transition: background-color 1s;
+                                        }
+                                        #loginBtn:hover {
+                                            background: #fc5b3f;
+                                            color: white;
+                                            -webkit-transition: background-color 1s;
+                                            -moz-transition: background-color 1s;
+                                            -o-transition: background-color 1s;
+                                            transition: background-color 1s;
+                                        }
+                            </style>
                             <% if (isLoggedIn) { %>
                                 <button style="font-weight:bold;" id="loginBtn2" class="uk-button uk-button-primary uk-border-rounded" onclick="window.location.href='/dashboard'">Open</button><hr>&nbsp;&nbsp;&nbsp;</hr>
-                                <button href="/signup" style="font-weight:bold;" class="uk-button uk-button-primary uk-border-rounded" onclick="logout()">Logout</button>
+                                <button id="logoutBtn" style="font-weight:bold;" class="uk-button uk-button-primary uk-border-rounded" onclick="logout()">Logout</button>
                         
                                 <script>
                                   function logout() {
@@ -109,23 +165,41 @@
                                     #signupBtn {
                                         display: none;
                                     }
+                                    #logoutBtn {
+                                        background: #fc5b3f;
+                                        color:white;
+                                        -webkit-transition: background-color 1s;
+                                        -moz-transition: background-color 1s;
+                                        -o-transition: background-color 1s;
+                                        transition: background-color 1s;
+                                    }
+                                    #logoutBtn:hover {
+                                        background: white;
+                                        color: #fc5b3f;
+                                        -webkit-transition: background-color 1s;
+                                        -moz-transition: background-color 1s;
+                                        -o-transition: background-color 1s;
+                                        transition: background-color 1s;
+                                    }
                                     #loginBtn2 {
-                                    background:white;
+                                        background: white;
+                                        color: #fc5b3f;
+                                        -webkit-transition: background-color 1s;
+                                        -moz-transition: background-color 1s;
+                                        -o-transition: background-color 1s;
+                                        transition: background-color 1s;
                                     }
                                     #loginBtn2:hover {
-                                        background: #d9d9d9;
+                                        background: #fc5b3f;
+                                        color: white;
+                                        -webkit-transition: background-color 1s;
+                                        -moz-transition: background-color 1s;
+                                        -o-transition: background-color 1s;
+                                        transition: background-color 1s;
                                     }
                                 </style>
                             <% } %>
                             <!-- <a href="login" class="uk-button uk-button-text"><i class="fas fa-user-circle"></i></a> -->
-                            <style>
-                                #loginBtn {
-                                    background:white;
-                                }
-                                #loginBtn:hover {
-                                    background: #d9d9d9;
-                                }
-                            </style>
                         </div>
                     </div>
                 </div>
@@ -138,17 +212,35 @@
         </script>
         <!-- header content end -->
     </header>
+    <div id="bg8"></div>
     <main>
         <!-- slideshow content begin -->
         <div class="uk-section uk-padding-remove-vertical">
-            <div class="uk-light in-slideshow uk-background-cover uk-background-top-center" style="background-image: url(img/in-liquid-slide-bg.png);" data-uk-slideshow>
+            <div class="uk-light in-slideshow uk-background-cover uk-background-top-center" style="background-image: url(img/in-liquid-slide-bg.png);" id="bg9" data-uk-slideshow>
                         <div class="uk-container">
                             <div class="uk-grid-medium" data-uk-grid>
                                 <div class="uk-width-1-2@s">
                                     <div class="uk-overlay">
                                         <h1 style="position:relative;margin-top:20px;">The #1</h1><h2 style="position:relative;margin-top:-70px;">Innovative Broker.</h2><br>
                                         <p class="uk-text-lead uk-visible@m" style="position:relative;margin-top:-15px;">Join us in our journey of creating a better world and a greater financial future for everyone!</p>
-                                        <a href="signup" style="font-weight:bold;" class="uk-button uk-button-default uk-border-rounded uk-visible@s">Get Started!</a>
+                                        <a href="signup" style="font-weight:bold;" class="uk-button uk-button-default uk-border-rounded uk-visible@s" id="getStarted">Get Started!</a>
+                                    <style>
+                                        #getStarted {
+                                            background: #fc5b3f;
+                                            -webkit-transition: background-color 1s;
+                                            -moz-transition: background-color 1s;
+                                            -o-transition: background-color 1s;
+                                            transition: background-color 1s;
+                                        }
+                                        #getStarted:hover {
+                                            background: white;
+                                            color: #fc5b3f;
+                                            -webkit-transition: background-color 1s;
+                                            -moz-transition: background-color 1s;
+                                            -o-transition: background-color 1s;
+                                            transition: background-color 1s;
+                                        }
+                                    </style>
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2@s">
